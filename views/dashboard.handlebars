@@ -1,0 +1,17 @@
+<div class="container has-background-primary-light">
+    <div>
+        <h1 class="is-size-1 has-text-centered has-text-weight-bold">Dashboard</h1>
+        <div>
+            {{#if posts.length}}
+        </div>
+        {{#each posts as |post|}}
+        <a href="/dashboard/edit/{{post.id}}"><button class="button has-background-primary">Edit Post</button></a>
+        {{> post-info post}}
+
+    </div>
+    {{/each}}
+
+    {{else}}
+    <h5 class="pb-5 has-text centered is-itallic">Currently, there are no posts</h5>
+    {{/if}}
+</div>

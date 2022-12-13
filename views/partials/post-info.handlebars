@@ -1,0 +1,20 @@
+<div class="container has-background-primary-light is-fullheight">
+    <div>
+        <div class="hero-body columns">
+            <div class="column box has-background-dark-light">
+                <p class="has-text-info-light"></p>
+                <a href="/post/{{id}}" class="has-text-dark is-pulled-left"><strong>{{title}}</strong></a></p>
+                <div class="card-content">
+                    <div class="content has-text-justified has-text-dark">
+                        {{post_content}}
+                    </div>
+                    <div class="is-pulled-right">
+                        <b>{{user.username}}</b>
+                        {{formate_date_created_at}} <a href="/post/{{id}}">{{comments.length}}&nbsp{{format_plural
+                            "comment" comments.length}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>

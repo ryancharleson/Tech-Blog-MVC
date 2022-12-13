@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    
+    <title>{{{Title}}} </title>
+
+</head>
+<body>
+     <nav class="navbar has-background-danger-dark">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <div class="brandName is-size-1 has-text-danger-light">Ryan's Blog Spot</div>
+          </a>
+        </div>
+        {{#if loggedIn}}
+            <a href="/" class="navbar-item is-hoverable pt-1 has-text-danger-light">Home</a>
+            <a href="/dashboard" class="navbar-item is-hoverable pt-1  has-text-danger-light">Dashboard</a>
+            <a href="/dashboard/create/" class="navbar-item is-hoverable pt-1 mr-4  has-text-danger-light">Create A Post</a>
+            <button id="logout" class=" button pt-1 mr-4 has-background-warning has-text-dark-dark">logout</button>
+            {{else}}
+            <a href="/" class="navbar-item is-hoverable has-text-danger-light pt-1">Homepage</a>
+            <a href="/login" class="navbar-item has-text-danger-light pt-1 ">Login</a>
+            {{/if}}
+      </nav>
+      <div class="container has-background-link-light is-fullheight">
+        <div class="hero is-fullheight">
+          {{{body}}}
+        </div>
+      </div>
+
+      
+
+    
+      {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+      {{/if}}
+</body>
+</html>
